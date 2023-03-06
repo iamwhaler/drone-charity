@@ -201,7 +201,7 @@ body {
     -o-transition: .75s;
     transition: .75s
 }
-
+/*
 @media (min-width:768px) {
     .wrap[data-current="1"],
     .wrap[data-current="3"] {
@@ -226,6 +226,7 @@ body {
         color: var(--blue)
     }
 }
+*/
 
 .wrap-scrollbar {
     display: -webkit-box;
@@ -378,7 +379,9 @@ body {
     margin-top: 0;
     margin-bottom: 0
 }
-
+.soldier{
+    display: none;
+}
 .header h1 .soldier img {
     position: absolute;
     height: 1.4em;
@@ -1110,6 +1113,7 @@ section.goal .hero img {
     height: 16px
 }
 
+
 .progress-bar .bar .earned-bar .earned-sum {
     position: absolute;
     font-size: 11px;
@@ -1118,6 +1122,8 @@ section.goal .hero img {
     right: 5px;
     font-style: italic
 }
+
+
 
 .progress-bar .mark {
     position: relative;
@@ -1148,6 +1154,19 @@ section.goal .hero img {
     margin-top: 8px;
     color: #eee
 }
+
+@media (min-width: 768px){
+    .earned-bar{
+        background: var(--blue) !important
+    }
+    .progress-bar .bar .earned-bar .earned-sum {
+        color: #fff !important;
+    }
+    .progress-bar .mark .mark--sum {
+        color: #888 !important;
+    }
+}
+
 
 .progress-bar .mark .mark--name {
     bottom: 100%;
