@@ -17,13 +17,19 @@ $(function () {
         $("[data-section-link]").click(function (a) {
             a.preventDefault();
             a = parseInt($(this).data("section-link"));
-            t.addClass("free"),
-                l.attr("data-current", a),
-                $(t)
-                    .stop()
-                    .animate({ scrollLeft: i[a] + "px" }, 500, function () {
-                        t.removeClass("free");
-                    });
+
+            if($(window).width()<767){
+                $('html, body').animate({'scrollTop':$('.billing').offset().top}, 500)
+            } else {
+                t.addClass("free"),
+                    l.attr("data-current", a),
+                    $(t)
+                        .stop()
+                        .animate({ scrollLeft: i[a] + "px" }, 500, function () {
+                            t.removeClass("free");
+                        });
+            }
+
         }),
         $("[data-modal-call]").click(function (a) {
             a.preventDefault(), $("html").addClass("modal-called"), $(".modal-bg").fadeIn(function () {}), $('.modal[data-modal="' + $(this).attr("data-modal-call") + '"]').fadeIn();

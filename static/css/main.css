@@ -580,8 +580,13 @@ nav ul a:hover {
     z-index: 1010;
     font-size: 18px;
     font-weight: 100;
-    display: none
+    display: none;
+    width: 100%;
+    max-width: 300px;
+
 }
+
+
 
 .socials-list {
     list-style-type: none;
@@ -1307,6 +1312,9 @@ section.goal .hero img {
     .share-channels li a img {
         width: 55px;
         height: 30px
+    }
+    .payment-channels{
+        column-gap: 12px;
     }
 }
 
