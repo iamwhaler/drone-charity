@@ -959,7 +959,8 @@ nav.nav--inner ul a {
     -ms-flex-positive: 1;
     flex-grow: 1;
     position: relative;
-    z-index: 5
+    z-index: 5;
+    padding-bottom: 15vh;
 }
 
 .cases article {
@@ -999,7 +1000,8 @@ nav.nav--inner ul a {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        row-gap: 30px
+        row-gap: 30px;
+        padding-bottom: 0;
     }
     .cases article {
         position: relative;
