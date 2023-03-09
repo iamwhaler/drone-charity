@@ -331,7 +331,7 @@ body {
     font-size: 24px;
     font-family: Staatliches, sans-serif
 }
-
+section a.btn-lnk,
 .header h2 a {
     background: #fff;
     display: inline-block;
@@ -339,7 +339,13 @@ body {
     border-radius: 30px;
     color: #000;
     text-decoration: none;
-    cursor: pointer
+    cursor: pointer;
+}
+section a.btn-lnk:after{
+    display: none !important;
+}
+section a.btn-lnk{
+    font-family: var(--font);
 }
 
 @media (min-width:767px) {
@@ -363,7 +369,6 @@ body {
         margin-bottom: 2em
     }
     .header h2 a {
-        background: 0 0
     }
     .header {
         min-height: 0 !important;
@@ -581,8 +586,8 @@ nav ul a:hover {
     font-size: 18px;
     font-weight: 100;
     display: none;
-    width: 100%;
-    max-width: 300px;
+    width: 90%;
+    max-width: 560px;
 
 }
 
@@ -788,9 +793,7 @@ nav.nav--inner ul {
     -moz-column-gap: 20px;
     column-gap: 20px;
     font-size: 20px;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: start;
+    justify-content: center;
     font-family: var(--font)
 }
 
@@ -867,8 +870,10 @@ nav.nav--inner ul a {
 }
 
 .wrap-scrollbar .billing .w small {
-    font-size: 14px;
-    font-style: italic
+    font-size: 16px;
+    line-height: 1.2;
+    display: block;
+    margin-top: 1em;
 }
 
 .pilot {
@@ -921,6 +926,14 @@ nav.nav--inner ul a {
 .unit:hover .unit-picture img {
     -webkit-filter: grayscale(.7);
     filter: grayscale(.7)
+}
+
+.unit-logo {
+    position: absolute;
+    width: 60px;
+    right: 0;
+    top: 0;
+    transform: translate(10px, -10px) rotate(25deg);
 }
 
 .unit-picture {
@@ -1101,8 +1114,8 @@ section.goal .hero img {
     display: -ms-flexbox;
     display: flex;
     position: relative;
-    margin-top: 70px;
-    margin-bottom: 70px
+    height: 140px;
+    align-items: center;
 }
 
 .progress-bar .bar {
@@ -1329,4 +1342,10 @@ section.goal .hero img {
 
 .subsection ul {
     margin-top: 15px
+}
+[data-modal="usdt"] h4{
+    margin-bottom: 0;
+}
+[data-modal="usdt"] address{
+    word-wrap: break-word;
 }
